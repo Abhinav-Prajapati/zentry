@@ -8,16 +8,19 @@ function Navbar() {
   const [prevScroll, setPrevScroll] = useState(0);
   const [navOpacity, setNavOpacity] = useState(1);
   const [navPosition, setNavPosition] = useState(0);
+  const [navbarColor, setNavbarColor] = useState('bg-transparent')
 
   useMotionValueEvent(scrollY, "change", (currentYscroll) => {
     if (currentYscroll === 0) {
       // At the top of the page
       setNavOpacity(1);
       setNavPosition(0);
+      setNavbarColor('bg-transparent')
     } else if (currentYscroll < prevScroll) {
       // Scrolling up
       setNavOpacity(1);
       setNavPosition(0);
+      setNavbarColor('bg-black')
     } else {
       // Scrolling down
       setNavOpacity(0);
@@ -36,9 +39,9 @@ function Navbar() {
         y: navPosition,
       }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
-      className="fixed inset-x-0 top-6 z-50 h-16 border-none sm:inset-x-6 rounded-md"
+      className="fixed inset-x-0 top-6 z-50 h-16 border-none sm:inset-x-6 rounded-md "
     >
-      <header className="flex justify-between py-2 px-4 bg-black rounded-md">
+      <header className={`${navbarColor} flex justify-between py-2 px-4 rounded-md transition-all duration-300 ease-in-out`}>
         <div className="flex gap-5">
           <img src="/img/logo.png" alt="logo" className="w-10" />
           <Button

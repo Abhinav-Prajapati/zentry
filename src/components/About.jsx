@@ -29,7 +29,6 @@ export const About = () => {
                          ${currentX3}% 0%,
                          ${currentX3}% ${currentY3}%,
                          ${currentX4}% ${currentY4}%)`;
-    console.log(scrollY.get())
     setClipPathValue(newClipPath);
   });
 

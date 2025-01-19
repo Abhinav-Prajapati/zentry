@@ -77,6 +77,7 @@ export const Hero = () => {
                 src={getVideoSource(upcomingVideoIndex)} // Use upcomingVideoIndex for the next video
                 muted
                 id="current-video"
+                preload="auto"
                 onLoadedData={handleVideoLoad}
               />
             </div>
@@ -86,6 +87,7 @@ export const Hero = () => {
             src={getVideoSource(currentIndex)}
             loop
             muted
+            preload="auto"
             id="next-video"
             onLoadedData={handleVideoLoad}
             className="absolute-center invisible absolute z-20 size-64 object-cover object-center"
@@ -94,6 +96,7 @@ export const Hero = () => {
             src={getVideoSource(currentIndex === totalVideos - 1 ? 1 : currentIndex)}
             autoPlay
             loop
+            preload="auto"
             muted
             onLoadedData={handleVideoLoad}
             className="absolute left-0 top-0 size-full object-cover object-center "

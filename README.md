@@ -1,6 +1,6 @@
 # Zentry UI Showcase
 
-[Live website zentry.abhii.site](https://zentry.abhii.site)
+[Live website 🔗zentry.abhii.site](https://zentry.abhii.site)
 
 Welcome to the **Zentry UI Showcase** project! This project highlights my **UX/UI design** and **React development** skills through an elegant and responsive user interface, crafted using modern web development technologies.
 
